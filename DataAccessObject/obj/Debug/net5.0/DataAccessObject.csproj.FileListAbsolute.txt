@@ -1,0 +1,15 @@
+D:\PRN221PE_FA22_TrialTest_NguyenTriCong\DataAccessObject\bin\Debug\net5.0\DataAccessObject.deps.json
+D:\PRN221PE_FA22_TrialTest_NguyenTriCong\DataAccessObject\bin\Debug\net5.0\DataAccessObject.runtimeconfig.json
+D:\PRN221PE_FA22_TrialTest_NguyenTriCong\DataAccessObject\bin\Debug\net5.0\DataAccessObject.runtimeconfig.dev.json
+D:\PRN221PE_FA22_TrialTest_NguyenTriCong\DataAccessObject\bin\Debug\net5.0\DataAccessObject.dll
+D:\PRN221PE_FA22_TrialTest_NguyenTriCong\DataAccessObject\bin\Debug\net5.0\DataAccessObject.pdb
+D:\PRN221PE_FA22_TrialTest_NguyenTriCong\DataAccessObject\obj\Debug\net5.0\DataAccessObject.csproj.AssemblyReference.cache
+D:\PRN221PE_FA22_TrialTest_NguyenTriCong\DataAccessObject\obj\Debug\net5.0\DataAccessObject.GeneratedMSBuildEditorConfig.editorconfig
+D:\PRN221PE_FA22_TrialTest_NguyenTriCong\DataAccessObject\obj\Debug\net5.0\DataAccessObject.AssemblyInfoInputs.cache
+D:\PRN221PE_FA22_TrialTest_NguyenTriCong\DataAccessObject\obj\Debug\net5.0\DataAccessObject.AssemblyInfo.cs
+D:\PRN221PE_FA22_TrialTest_NguyenTriCong\DataAccessObject\obj\Debug\net5.0\DataAccessObject.csproj.CoreCompileInputs.cache
+D:\PRN221PE_FA22_TrialTest_NguyenTriCong\DataAccessObject\obj\Debug\net5.0\DataAccessObject.dll
+D:\PRN221PE_FA22_TrialTest_NguyenTriCong\DataAccessObject\obj\Debug\net5.0\refint\DataAccessObject.dll
+D:\PRN221PE_FA22_TrialTest_NguyenTriCong\DataAccessObject\obj\Debug\net5.0\DataAccessObject.pdb
+D:\PRN221PE_FA22_TrialTest_NguyenTriCong\DataAccessObject\obj\Debug\net5.0\DataAccessObject.genruntimeconfig.cache
+D:\PRN221PE_FA22_TrialTest_NguyenTriCong\DataAccessObject\obj\Debug\net5.0\ref\DataAccessObject.dll

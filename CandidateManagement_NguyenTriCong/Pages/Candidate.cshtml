@@ -1,0 +1,126 @@
+﻿@page
+@model CandidateManagement_NguyenTriCong.Pages.CandidateModel
+@{
+}
+
+@if (ViewBag.Message != null)
+{
+    <div class="alert-danger">@ViewBag.Message</div>
+}
+else
+{
+    <div class="col-md-12">
+        <form class="row">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <span class="form-group">
+                <label asp-for="CandidateSearchName" class="control-label">Search by Name or by Date(mm/dd/yyyy)</label>
+                <div class="row">
+                    <input asp-for="CandidateSearchName" class=" col-md-4" />
+                    <input asp-for="CandidateSearchDate" class="col-md-4" type="date" />
+                    <input type="submit" value="Search" class="btn btn-primary col-md-4" />
+                </div>
+
+            </span>
+        </form>
+    </div>
+
+    <p>
+        <a class="btn btn-primary" asp-page="Create">Create New</a>
+    </p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.CandidateProfiles.First().Fullname)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CandidateProfiles.First().Birthday)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CandidateProfiles.First().ProfileShortDescription)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CandidateProfiles.First().ProfileUrl)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CandidateProfiles.First().Posting)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.CandidateProfiles)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Fullname)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Birthday)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ProfileShortDescription)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ProfileUrl)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Posting.PostingId)
+                    </td>
+                    <td>
+                        <a asp-page="Update" asp-route-id="@item.CandidateId">Edit</a>
+                        <a asp-page="Details" asp-route-id="@item.CandidateId">Details</a>
+                        <a asp-page="Delete" asp-route-id="@item.CandidateId">Delete</a>
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+}
+@{
+    var prevDisabled = "";
+    var nextDisabled = "";
+
+    if (Model.CandidateProfiles == null)
+    {
+        prevDisabled = "disabled";
+        nextDisabled = "disabled";
+    }
+    else
+    {
+        prevDisabled = !Model.CandidateProfiles.HasPreviousPage ? "disabled" : "";
+        nextDisabled = !Model.CandidateProfiles.HasNextPage ? "disabled" : "";
+    }
+}
+
+
+@if (Model.CandidateProfiles != null)
+{
+    <a asp-page="./Candidate"
+   asp-route-pageIndex="@(Model.CandidateProfiles.PageIndex - 1)"
+       class="btn btn-primary @prevDisabled">
+        Previous
+    </a>
+}
+
+@if (Model.CandidateProfiles != null)
+{
+    for (int i = 1; i <= Model.CandidateProfiles.TotalPages; i++)
+    {
+        <a asp-page="./Candidate"
+   asp-route-pageIndex="@(i)"
+           class="btn @(Model.CandidateProfiles.PageIndex == i ? "btn-primary" : "")">
+            @(i)
+        </a>
+    }
+}
+@if (Model.CandidateProfiles != null)
+{
+    <a asp-page="./Candidate"
+   asp-route-pageIndex="@(Model.CandidateProfiles.PageIndex + 1)"
+       class="btn btn-primary @nextDisabled">
+        Next
+    </a>
+}
+
